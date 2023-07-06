@@ -1,3 +1,5 @@
+# Generate Password
+
 ## Password Generator
 
 This is a simple project that consists of a random password generator. Users can select the criteria for generating the password, such as uppercase letters, lowercase letters, numbers, and symbols. The generated password is displayed in a text field and can be copied to the clipboard.
