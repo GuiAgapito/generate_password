@@ -29,4 +29,4 @@ This is a simple project that consists of a random password generator. Users can
 ## Contact
 
 - Guilherme Agapito Lima - guilherme.agapito2004@gmail.com
-- Notes: (https://guiagapito.github.io).
+- Generate Password: (https://guiagapito.github.io/generate_password/).
