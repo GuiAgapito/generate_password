@@ -1,0 +1,106 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(background.jpg);
+      background-size: cover;
+    }
+
+    .message {
+      text-align: center;
+    }
+
+    .questions {
+      width: 30vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f3e5f5;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .viewPassword {
+      width: 100%;
+      padding: 10px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      border-bottom: 1px solid #351525;
+    }
+
+    .iconCopy {
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #FF2B2A;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"],
+    input[type="range"] {
+      accent-color: #ff0000;
+      border-color: #ff0000;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    input[type="range"] {
+      width: 90%;
+    }
+
+    .alert {
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background-color: #f3e5f5;
+      position: fixed;
+      top: 20px;
+      display: none;
+      margin: 0px 20px;
+    }
+
+    @media screen and (max-width: 865px) {
+      .questions {
+        width: 90vw;
+      }
+    }
+
+    @media screen and (max-width: 765px) {
+      .questions {
+        width: 90vw;
+      }
+    }
