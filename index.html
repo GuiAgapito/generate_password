@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Generator</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,13 +15,12 @@
     <span id="alert" class="alert"></span>
 
     <div class="questions">
-      <div class="message">
-        <h1>Olá, seja bem-vindo!</h1>
-        <h3>Gere a sua senha aleatória</h3>
+      <div class="message">        
+        <h3>Gere a sua senha aleatória!</h3>
       </div>
 
       <!-- Input field for displaying the generated password -->
-      <div class="group">
+      <div class="group inputSearch">
         <input type="text" class="viewPassword" id="viewPassword">
         <!-- Icon for copying the password -->
         <svg id="iconCopy" class="iconCopy" width="26" height="26" fill="none" stroke="currentColor"
@@ -32,9 +32,10 @@
       </div>
 
       <!-- Input range for selecting the password length -->
-      <div class="group">
-        <input type="range" id="lengthPassword" class="lengthPassword" min="4" max="12">
-        <label id="infoLength"></label>
+      <div class="group inputLength">
+        Quantidade de caracteres: 
+        <input type="number" class="lengthPassword" id="lengthPassword">
+        <label id="infoLength" style="display: none;"></label>
       </div>
 
       <!-- Checkbox for uppercase letters -->

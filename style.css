@@ -39,18 +39,42 @@
       align-items: center;
     }
 
+    .inputSearch {
+      background-color: #FFF;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
     .viewPassword {
       width: 100%;
       padding: 10px;
       background-color: transparent;
       border: none;
       outline: none;
-      font-size: 1em;
-      border-bottom: 1px solid #351525;
+      font-size: 1em;      
     }
 
     .iconCopy {
       cursor: pointer;
+      transition: .2s;
+    }
+
+    .iconCopy:hover {
+      background-color: #FF2B2A;
+      padding: 4px;
+      border-radius: 5px;
+      color: #FFF;
+    }
+
+    .inputLength {
+      width: 100%;
+    }
+
+    .inputLength .lengthPassword {
+      outline: none;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
     }
 
     button {
@@ -63,19 +87,6 @@
       color: #fff;
       cursor: pointer;
       border-radius: 10px;
-    }
-
-    input[type="checkbox"],
-    input[type="range"] {
-      accent-color: #ff0000;
-      border-color: #ff0000;
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-    }
-
-    input[type="range"] {
-      width: 90%;
     }
 
     .alert {

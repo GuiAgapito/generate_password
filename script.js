@@ -7,6 +7,8 @@ const lowercaseTextInput = document.getElementById("lowercaseText");
 const numbersInput = document.getElementById("numbers");
 const symbolsInput = document.getElementById("symbols");
 const btnGenerate = document.getElementById("btnGenerate");
+const iconCopy = document.getElementById("iconCopy");
+const alert = document.getElementById("alert");
 
 // Define arrays for numbers, symbols, lowercase and uppercase letters
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -25,6 +27,14 @@ lengthInput.addEventListener("change", () => {
 
 // Generate password when btnGenerate is clicked
 btnGenerate.addEventListener("click", () => {
+  if (lengthInput.value == "") {
+    alert.style.display = "flex";
+    alert.textContent = "Indique a quantidade de caracteres!";
+    setTimeout(() => {
+      alert.style.display = "none";
+    }, 2000);
+  }
+  
   generatePassword(
     uppercaseTextInput.checked,
     lowercaseTextInput.checked,
@@ -66,9 +76,6 @@ const generatePassword = (
 };
 
 // Copy the generated password when iconCopy is clicked
-const iconCopy = document.getElementById("iconCopy");
-const alert = document.getElementById("alert");
-
 iconCopy.addEventListener("click", () => {
   if (viewPassword.value !== "") {
     viewPassword.select();
