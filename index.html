@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerador de senhas aleatórias</title>
+  <body>    
 
-  <link rel="stylesheet" href="style.css">
-</head>
+    <div class="container">      
 
-<body>
-  <div class="container">
-
-    <span id="alert" class="alert"></span>
-
-    <div class="questions">
-      <div class="message">        
-        <h3>Gere a sua senha aleatória!</h3>
+      <div class="back-message">        
+        <div class="message" id="message">
+        </div>
       </div>
 
-      <!-- Input field for displaying the generated password -->
-      <div class="group inputSearch">
-        <input type="text" class="viewPassword" id="viewPassword">
-        <!-- Icon for copying the password -->
-        <svg id="iconCopy" class="iconCopy" width="26" height="26" fill="none" stroke="currentColor"
-          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <rect width="13" height="13" x="9" y="9" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>
-      </div>
+      <div class="content">
+        <div class="group-form">          
+          <label for="">Senha:</label>
 
-      <!-- Input range for selecting the password length -->
-      <div class="group inputLength">
-        Quantidade de caracteres: 
-        <input type="number" class="lengthPassword" id="lengthPassword">
-        <label id="infoLength" style="display: none;"></label>
-      </div>
+          <div class="group-view-passwords">
+            <input type="text" name="" id="view-password" autocomplete="off">
+            <button class="btn-copy" id="btn-copy">Copiar</button>
+          </div>  
 
-      <!-- Checkbox for uppercase letters -->
-      <div class="group">
-        <input type="checkbox" id="uppercaseText">
-        <label for="uppercaseText">Letras maiúsculas</label>
-      </div>
+        </div>
+        
+        <label for="">Quantidade de Caracteres:</label>
+        <div class="group-form group-view-passwords">                              
+          <input type="text" class="length-password" name="" id="length-password" oninput="filter_numbers()" autocomplete="off">          
+        </div>
+                
+        <div class="type-characters">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="input-check" id="uppercase-text">
+            <label for="uppercase-text">Letras Maiúsculas</label>            
+          </div>   
+          
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="input-check" id="lowercase-text">
+            <label for="lowercase-text">Letras Minúsculas</label>            
+          </div>  
 
-      <!-- Checkbox for lowercase letters -->
-      <div class="group">
-        <input type="checkbox" id="lowercaseText">
-        <label for="lowercaseText">Letras minúsculas</label>
-      </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="input-check" id="numbers">
+            <label for="numbers">Números</label>            
+          </div>  
 
-      <!-- Checkbox for numbers -->
-      <div class="group">
-        <input type="checkbox" id="numbers">
-        <label for="numbers">Números</label>
-      </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="input-check" id="symbols">
+            <label for="symbols">Símbolos</label>            
+          </div>  
+        </div>
 
-      <!-- Checkbox for symbols -->
-      <div class="group">
-        <input type="checkbox" id="symbols">
-        <label for="symbols">Símbolos</label>
-      </div>
+        <div class="group-form">
+          <button class="btn-generate" id="btn-generate">Gerar</button>
+        </div>
+      </div>      
 
-      <!-- Button for generating the password -->
-      <div class="group">
-        <button id="btnGenerate">Gerar</button>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Script file for generating the password -->
-  <script src="script.js"></script>
-</body>
-
+    </div>    
+    <script src="script.js"></script>
+  </body>
 </html>

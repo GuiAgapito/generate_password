@@ -1,118 +1,194 @@
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    .container {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url(background.jpg);
-      background-size: cover;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    .message {
-      text-align: center;
-    }
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
 
-    .questions {
-      width: 30vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-      background-color: #f3e5f5;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      border-radius: 5px;
-    }
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;  
+  flex-direction: column;
+  color: #FFF;
+  padding: 20px;
+}
 
-    .group {
-      width: 100%;
-      display: flex;
-      align-items: center;
-    }
+.back-message {
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+}
 
-    .inputSearch {
-      background-color: #FFF;
-      padding: 5px;
-      border-radius: 10px;
-    }
+.message {    
+  background-color: #101010;
+  box-shadow: #454545 1px 1px 1px, #454545 -1px -1px 1px, #454545 1px -1px 1px, #454545 -1px 1px 1PX;    
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  text-align: justify;
+  position: fixed;    
+  margin: 0 20px;
+  margin-top: -300px;
+  transition: .5s ease-in-out;
+}
 
-    .viewPassword {
-      width: 100%;
-      padding: 10px;
-      background-color: transparent;
-      border: none;
-      outline: none;
-      font-size: 1em;      
-    }
+.active {
+  margin-top: 20px;
+}
 
-    .iconCopy {
-      cursor: pointer;
-      transition: .2s;
-    }
+.fa-solid {
+  color: #5415da;
+}
 
-    .iconCopy:hover {
-      background-color: #FF2B2A;
-      padding: 4px;
-      border-radius: 5px;
-      color: #FFF;
-    }
+.content {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  background-color: #101010;
+  box-shadow: #454545 1px 1px 1px, #454545 -1px -1px 1px, #454545 1px -1px 1px, #454545 -1px 1px 1PX;    
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .inputLength {
-      width: 100%;
-    }
+.group-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .inputLength .lengthPassword {
-      outline: none;
-      border: none;
-      padding: 10px;
-      border-radius: 10px;
-    }
+.group-view-passwords {
+  width: 100%;
+  height: 55px;
+  display: flex;  
+  background-color: #010101;
+  border-radius: 10px;  
+  padding: 10px;
+}
 
-    button {
-      background-color: #FF2B2A;
-      width: 100%;
-      padding: 10px;
-      border: none;
-      outline: none;
-      font-size: 1em;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 10px;
-    }
+.group-form input[type="text"] {
+  width: 100%;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #CCC;    
+  height: 100%;
+}
 
-    .alert {
-      padding: 10px;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      background-color: #f3e5f5;
-      position: fixed;
-      top: 20px;
-      display: none;
-      margin: 0px 20px;
-    }
+input[type="text"]:active {
+  background-color: transparent;
+}
 
-    @media screen and (max-width: 865px) {
-      .questions {
-        width: 90vw;
-      }
-    }
+button {  
+  background-color: #5415da;
+  color: #FFF;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
 
-    @media screen and (max-width: 765px) {
-      .questions {
-        width: 90vw;
-      }
-    }
+button:hover {
+  background-color: rgb(57, 0, 162);
+}
+
+.btn-generate {
+  margin: auto;
+  width: 100px;
+  height: 40px;
+}
+
+.type-characters {
+  width: 100%;    
+  display: flex;
+  flex-direction: column;  
+  gap: 20px 0px;
+}
+
+.checkbox-wrapper {
+  cursor: pointer;    
+  user-select: none;
+}
+
+.checkbox-wrapper .input-check {
+  appearance: none;
+  background-color: #AAA;
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 30px;
+  vertical-align: middle;     
+  cursor: pointer;
+}
+
+.checkbox-wrapper .input-check::before {
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+
+.checkbox-wrapper .input-check,
+.checkbox-wrapper .input-check::after {
+  transition: all 100ms ease-out;
+}
+
+.checkbox-wrapper .input-check::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
+
+.checkbox-wrapper .input-check:hover {
+  background-color: #AAA;
+  transition-duration: 0s;
+}
+
+.checkbox-wrapper .input-check:checked {
+  background-color: #4819a9;
+}
+
+.checkbox-wrapper .input-check:checked::after {
+  background-color: #fff;
+  left: 13px;
+}
+
+.checkbox-wrapper :focus:not(.focus-visible) {
+  outline: 0;
+}
+
+.checkbox-wrapper .input-check:checked:hover {
+  background-color: #4819a9;
+}
+
+label {
+  font-weight: bold;
+}
